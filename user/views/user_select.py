@@ -21,7 +21,7 @@ class UserSelectView(mixins.ListModelMixin,
     无描述
 
     retrieve_by_username:
-    根据用户名查询用户信息
+    根据用户名查询用户信息！
 
     传入用户名查询用户信息
     """
