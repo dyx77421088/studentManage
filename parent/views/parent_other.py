@@ -5,6 +5,8 @@ from rest_framework.viewsets import ModelViewSet, GenericViewSet
 from rest_framework import serializers, mixins, status
 from rest_framework.serializers import ModelSerializer
 
+from parent.models import Parent
+from parent.views.parent_insert import ParentInfoSerializers
 from user.models import User
 from rest_framework.response import Response
 
@@ -13,15 +15,13 @@ from rest_framework.response import Response
 #     class Meta:
 #         model = User
 #         fields = "__all__"
-from user.views.user_select import UserInfoSerializers2
 
 
-class UserOtherView(ModelViewSet):
+class ParentOtherView(ModelViewSet):
     """
-    update:
-    修改用户信息
+    update:修改家长表信息
 
     无描述
     """
-    queryset = User.objects.all()
-    serializer_class = UserInfoSerializers2
+    queryset = Parent.objects.all()
+    serializer_class = ParentInfoSerializers

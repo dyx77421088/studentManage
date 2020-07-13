@@ -6,7 +6,6 @@ from rest_framework import serializers, mixins, status
 from rest_framework.serializers import ModelSerializer
 
 from parent.models import Parent
-from rest_framework.response import Response
 
 
 class ParentInfoSerializers(ModelSerializer):

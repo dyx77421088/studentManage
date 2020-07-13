@@ -13,7 +13,7 @@ from rest_framework.response import Response
 #     class Meta:
 #         model = User
 #         fields = "__all__"
-from user.views.user_select import UserInfoSerializers2
+from user.views.user_select import UserInfoSerializers
 
 
 class UserOtherView(ModelViewSet):
@@ -24,4 +24,4 @@ class UserOtherView(ModelViewSet):
     无描述
     """
     queryset = User.objects.all()
-    serializer_class = UserInfoSerializers2
+    serializer_class = UserInfoSerializers
