@@ -24,6 +24,12 @@ class UserSelectView(mixins.ListModelMixin,
     根据用户名查询用户信息！
 
     传入用户名查询用户信息
+
+    login:
+    登录验证
+
+    用户名或手机号加密码登录，同时优先用户名
+
     """
     queryset = User.objects.all()
     serializer_class = UserInfoSerializers
