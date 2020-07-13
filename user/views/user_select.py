@@ -30,7 +30,7 @@ class UserSelectView(mixins.ListModelMixin,
 
     传入用户名查询用户信息
 
-    retrieve_by_username:
+    retrieve_by_phone_number:
     根据手机号查询用户信息！
 
     传入手机号查询用户信息

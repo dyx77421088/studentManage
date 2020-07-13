@@ -37,6 +37,12 @@ class UserOtherView(ModelViewSet):
 
 
 class Other(APIView):
+    """
+    post:
+    发送验证码
+
+    传入一个手机号
+    """
     @swagger_auto_schema(
         request_body=openapi.Schema(
             type=openapi.TYPE_OBJECT,
