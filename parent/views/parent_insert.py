@@ -11,7 +11,7 @@ from parent.models import Parent
 class ParentInfoSerializers(ModelSerializer):
     class Meta:
         model = Parent
-        fields = ['userInfo']
+        fields = ['user_info']
 
 
 class ParentInsertView(mixins.CreateModelMixin,
