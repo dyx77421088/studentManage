@@ -8,7 +8,7 @@ class Parent(models.Model):
     user_info = models.ForeignKey(User, verbose_name="用户信息", on_delete=models.SET_NULL, null=True)
 
     class Meta:
-        verbose_name = '家长表1'
+        verbose_name = '家长表33'
         verbose_name_plural = verbose_name
 
 
