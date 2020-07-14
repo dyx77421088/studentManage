@@ -10,3 +10,7 @@ class Parent(models.Model):
     class Meta:
         verbose_name = '家长表'
         verbose_name_plural = verbose_name
+
+
+class Cs:
+    pass
