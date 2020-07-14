@@ -1,9 +1,10 @@
 from drf_yasg import openapi
 
 
-def request_body(properties):
+def request_body(properties, required=None):
     return openapi.Schema(
         type=openapi.TYPE_OBJECT,
+        required=required,
         properties=properties
     )
 

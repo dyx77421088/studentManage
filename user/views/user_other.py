@@ -16,6 +16,7 @@ from rest_framework.response import Response
 from user.views.urls import send_code
 from user.views.user_insert import pd_phone_number
 from user.views.user_select import UserInfoSerializers
+from utils.my_swagger_auto_schema import request_body, string_schema
 
 
 class UserOtherView(ModelViewSet):
@@ -43,14 +44,13 @@ class Other(APIView):
 
     传入一个手机号
     """
+
     @swagger_auto_schema(
-        request_body=openapi.Schema(
-            type=openapi.TYPE_OBJECT,
-            required=["phone_number"],
-            properties={
-                'phone_number': openapi.Schema(type=openapi.TYPE_STRING, description="这是手机号"),
-            }
-        ),
+        request_body=request_body({
+            "phone_number": string_schema("填入手机号")
+        },
+            required=['phone_number']
+        )
     )
     def post(self, request, *args, **kwargs):
         phone_number = request.data.get('phone_number', '')
