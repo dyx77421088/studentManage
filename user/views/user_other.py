@@ -14,7 +14,7 @@ from rest_framework.response import Response
 #         model = User
 #         fields = "__all__"
 from user.views.urls import send_code
-from user.views.user_insert import pd_phone_number
+from user.views.user_insert import pd_phone_number, STATUS_CODE_SUCCESS
 from user.views.user_select import UserInfoSerializers
 from utils.my_swagger_auto_schema import request_body, string_schema
 
@@ -60,4 +60,4 @@ class Other(APIView):
             send_code(phone_number)
         except UserWarning:
             raise exceptions.ParseError('参数错误或手机号不合法')
-        return Response({"message": "发送验证码成功,验证码在2分钟内有效"})
+        return Response({"status": STATUS_CODE_SUCCESS, "message": "发送验证码成功,验证码在2分钟内有效"})
